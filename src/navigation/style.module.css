@@ -1,0 +1,62 @@
+.contentContainer {
+    flex: 1;
+    background-color: aqua;
+
+    overflow-y: auto;
+}
+
+.sidebar {
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.link {
+    color: black;
+    text-decoration: none;
+    outline: none;
+}
+
+.sectionName {
+    padding: .5rem 1rem;
+    
+    cursor: pointer;
+    user-select: none;
+}
+
+.pageList {
+    display: flex;
+    flex-direction: column;
+    
+    overflow-y: hidden;
+    
+    height: 0;
+
+    transition: 1s height ease-in-out;
+}
+
+.pageList.open {
+    height: fit-content;
+    /* max-height: 50vh; */
+}
+
+.pageName {
+    margin: .25rem 1rem .25rem 1rem;
+    padding: .25rem 1rem;
+    background-color: rgb(231, 231, 231);
+
+    border-radius: 10px;
+
+    cursor: pointer;
+    user-select: none;
+
+    transition: all .1s ease-in-out;
+}
+
+.pageName:hover {
+    background-color: rgb(214, 214, 214);
+    transform: scale(1.05);
+}
+
+.pageName.active {
+    background-color: rgb(196, 196, 196);
+}
