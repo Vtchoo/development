@@ -1,7 +1,10 @@
 .contentContainer {
     flex: 1;
-    background-color: aqua;
+    background-color: whitesmoke;
 
+    /* max-width: 100%; */
+
+    overflow-x: hidden;
     overflow-y: auto;
 }
 

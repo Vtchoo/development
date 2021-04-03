@@ -8,10 +8,10 @@ interface ImgProps extends ImgHTMLAttributes<HTMLImageElement>{
 // https://stackoverflow.com/questions/52915486/load-image-from-server-that-requires-sending-headers
 
 interface Img2Props extends ImgProps{
-    headers: { [header: string]: string }
+    headers?: { [header: string]: any }
 }
 
-function ImgWithHeaders(props: Img2Props) {
+function Img(props: Img2Props) {
     
     const { src, headers, background, children, ...rest } = props
 
@@ -24,10 +24,14 @@ function ImgWithHeaders(props: Img2Props) {
         try {
             if (!src) return
 
+            const headers = new Headers()
+            if(props.headers)    
+                Object.entries(props.headers).map(([name, value]) => headers.append(name, value))
+
             const data = await fetch(src, { headers })
             const blob = await data.blob()
             const url = URL.createObjectURL(blob)
-    
+
             setUrl(url)
             
         } catch (error) {
@@ -46,4 +50,4 @@ function ImgWithHeaders(props: Img2Props) {
     )
 }
 
-export { ImgWithHeaders }
+export { Img }

@@ -9,6 +9,8 @@
 
 	flex: 1;
 	align-self: stretch;
+
+	max-width: 100vw;
 }
 
 body {
