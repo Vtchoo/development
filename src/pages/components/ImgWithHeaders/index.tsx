@@ -1,6 +1,9 @@
 import { Img } from '../../../components/Img'
 import style from './style.module.css'
 
+// const url = 'https://raw.githubusercontent.com/Vtchoo/development/master/public/images/cars/chevrolet-corvette.jpg'
+const url = 'https://picsum.photos/id/352/3264/2176.jpg'
+
 function PageImgWithHeaders() {
     
     return (
@@ -9,7 +12,7 @@ function PageImgWithHeaders() {
 
             <p>When inserting an image into a page, whe usually provide a source link via the src property of the {'<img>'} component. That way, there's no way to specify headers that should be sent to the api, for example, authorization headers.</p>
             <p>The only way to send data with the default img html component is via url, like http://myapi.com/image.jpg?token=12345abc</p>
-            <p>However, its is possible to make a dynamic GET request to the api with javascript including custom headers.</p>
+            <p>However, it is possible to make a dynamic GET request to the api with javascript including custom headers.</p>
 
             <h4>React solution</h4>
             <p>In this page, I present the component {'<Img />'}, which is basically the same as the {'<img>'} tag, but accepting the <code>headers</code> prop, like {'<Img headers />'}</p>
@@ -23,10 +26,10 @@ function PageImgWithHeaders() {
 
             <div style={{ display: 'flex' }}>
                 <div style={{ flex: 1 }}>
-                    <img style={{ width: '100%' }} src='https://raw.githubusercontent.com/Vtchoo/development/master/public/images/cars/chevrolet-corvette.jpg'></img>
+                    <img style={{ width: '100%' }} src={url}></img>
                 </div>
                 <div style={{ flex: 1 }}>
-                    <Img style={{ width: '100%' }} src='https://raw.githubusercontent.com/Vtchoo/development/master/public/images/cars/chevrolet-corvette.jpg' headers={{ 'X-Custom-Header': 'value123' }} />
+                    <Img style={{ width: '100%' }} src={url} headers={{ 'X-Custom-Header': 'value123' }} />
                 </div>
             </div>
         </div>

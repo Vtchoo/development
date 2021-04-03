@@ -28,7 +28,7 @@ interface Section {
 // Home
 const home: Page = {
     name: 'Home',
-    path: '/',
+    path: '/development/',
     component: Home,
     exact: true
 }
@@ -36,19 +36,19 @@ const home: Page = {
 // Hooks
 const pageUseDebounce: Page =  {
     name: 'useDebounce',
-    path: '/usedebounce',
+    path: '/development/usedebounce',
     component: PageUseDebounce,
 }
 
 // Components
 const pageImgWithHeaders: Page = {
     name: 'Img With Headers',
-    path: '/imgwithheaders',
+    path: '/development/imgwithheaders',
     component: PageImgWithHeaders
 }
 const pageCustomSelect: Page = {
     name: 'Custom Select',
-    path: '/select',
+    path: '/development/select',
     component: PageCustomSelect
 }
 
