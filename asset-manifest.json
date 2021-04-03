@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/development/static/css/main.411752a7.chunk.css",
-    "main.js": "/development/static/js/main.486ba749.chunk.js",
-    "main.js.map": "/development/static/js/main.486ba749.chunk.js.map",
-    "runtime-main.js": "/development/static/js/runtime-main.4449d625.js",
-    "runtime-main.js.map": "/development/static/js/runtime-main.4449d625.js.map",
-    "static/js/2.34bd47ef.chunk.js": "/development/static/js/2.34bd47ef.chunk.js",
-    "static/js/2.34bd47ef.chunk.js.map": "/development/static/js/2.34bd47ef.chunk.js.map",
-    "static/js/3.6974c9e5.chunk.js": "/development/static/js/3.6974c9e5.chunk.js",
-    "static/js/3.6974c9e5.chunk.js.map": "/development/static/js/3.6974c9e5.chunk.js.map",
+    "main.js": "/development/static/js/main.ddf30cad.chunk.js",
+    "main.js.map": "/development/static/js/main.ddf30cad.chunk.js.map",
+    "runtime-main.js": "/development/static/js/runtime-main.4c06a3af.js",
+    "runtime-main.js.map": "/development/static/js/runtime-main.4c06a3af.js.map",
+    "static/js/2.c0af9735.chunk.js": "/development/static/js/2.c0af9735.chunk.js",
+    "static/js/2.c0af9735.chunk.js.map": "/development/static/js/2.c0af9735.chunk.js.map",
+    "static/js/3.16a7eb3d.chunk.js": "/development/static/js/3.16a7eb3d.chunk.js",
+    "static/js/3.16a7eb3d.chunk.js.map": "/development/static/js/3.16a7eb3d.chunk.js.map",
     "index.html": "/development/index.html",
     "static/css/main.411752a7.chunk.css.map": "/development/static/css/main.411752a7.chunk.css.map",
-    "static/js/2.34bd47ef.chunk.js.LICENSE.txt": "/development/static/js/2.34bd47ef.chunk.js.LICENSE.txt"
+    "static/js/2.c0af9735.chunk.js.LICENSE.txt": "/development/static/js/2.c0af9735.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.4449d625.js",
-    "static/js/2.34bd47ef.chunk.js",
+    "static/js/runtime-main.4c06a3af.js",
+    "static/js/2.c0af9735.chunk.js",
     "static/css/main.411752a7.chunk.css",
-    "static/js/main.486ba749.chunk.js"
+    "static/js/main.ddf30cad.chunk.js"
   ]
 }
