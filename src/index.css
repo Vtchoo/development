@@ -25,6 +25,13 @@ body {
 	height: 100vh;
 }
 
+.page {
+	width: 100%;
+    max-width: 900px;
+	padding: 2rem;
+}
+
+
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
