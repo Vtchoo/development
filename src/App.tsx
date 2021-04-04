@@ -1,5 +1,4 @@
-import './App.css';
-import MainNavigation from './navigation';
+import MainNavigation from './navigation'
 
 function App() {
 	return (
