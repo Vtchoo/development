@@ -29,6 +29,8 @@ body {
 	width: 100%;
     max-width: 900px;
 	padding: 2rem;
+
+	/* flex-direction: column; */
 }
 
 

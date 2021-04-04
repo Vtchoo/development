@@ -19,11 +19,7 @@ function Img(props: ImgProps) {
     async function fetchImage() {
 
         try {
-            if (!src) return
-
-            // const headers = new Headers()
-            // if(props.headers)    
-            //     Object.entries(props.headers).map(([name, value]) => headers.append(name, value))
+            if (!src) return setUrl('')
 
             const data = await fetch(src, { headers })
             const blob = await data.blob()

@@ -43,6 +43,11 @@ function PageUseDebounce() {
             <p>Debouncing a function is possible using a custom hook, that we'll call <code>useDebounce</code>. It takes a function to be debounced as first parameter, the values we want to watch to check if they have been changed (the search term or username, for example) and, as last parameter, the desired delay in milisseconds.</p>
             <p>As an alternative, we can change a state variable after a desired delay. This can be done with a very similiar hook we'll call <code>useDebouncedValue</code>. The debounced value can be watched on another <code>useEffect</code> hook and execute a function when it changes.</p>
         
+            <h4>The code:</h4>
+            <SyntaxHighlighter language='typescript' style={dracula} wrapLongLines>
+                {codeComponentUseDebounce}
+            </SyntaxHighlighter>
+            
             <h4>Examples</h4>
 
             <div style={{ display: 'flex', maxWidth: '100%' }}>
@@ -72,6 +77,27 @@ function PageUseDebounce() {
         </div>
     )
 }
+
+const codeComponentUseDebounce =
+`function useDebounce(func: () => void, dependencies: any[], delay: number) {
+
+    useEffect(() => {
+        const timeout = setTimeout(func, delay)
+        return () => clearTimeout(timeout)
+    }, [delay, ...dependencies])
+}
+
+function useDebouncedValue<T>(value: T, delay: number) {
+
+    const [debouncedValue, setDebouncedValue] = useState(value)
+
+    useEffect(() => {
+        const handler = setTimeout(() => setDebouncedValue(value), delay)
+        return () => clearTimeout(handler);
+    }, [value, delay])
+    
+    return debouncedValue
+}`
 
 const codeUseDebounce =
 `const [searchTerm, setSearchTerm] = useState('')
