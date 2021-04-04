@@ -16,7 +16,7 @@ function MainNavigation() {
                 <Switch>
                     {pages.map(page =>
                         <Route path={page.path} exact={page.exact}>
-                            {page.component}
+                            {page.component()}
                         </Route>
                     )}
                 </Switch>
