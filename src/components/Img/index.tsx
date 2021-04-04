@@ -1,32 +1,29 @@
 import { ImgHTMLAttributes, useEffect, useState } from "react"
 
+// https://stackoverflow.com/questions/52915486/load-image-from-server-that-requires-sending-headers
+
 interface ImgProps extends ImgHTMLAttributes<HTMLImageElement>{
     onDownloadProgress?: (e: ProgressEvent) => void
     background?: boolean
+    headers?: { [header: string]: string }
 }
 
-// https://stackoverflow.com/questions/52915486/load-image-from-server-that-requires-sending-headers
-
-interface Img2Props extends ImgProps{
-    headers?: { [header: string]: any }
-}
-
-function Img(props: Img2Props) {
+function Img(props: ImgProps) {
     
     const { src, headers, background, children, ...rest } = props
 
     const [url, setUrl] = useState('')
 
-    useEffect(() => { fetchImage() }, [])    
+    useEffect(() => { fetchImage() }, [src])    
 
     async function fetchImage() {
 
         try {
             if (!src) return
 
-            const headers = new Headers()
-            if(props.headers)    
-                Object.entries(props.headers).map(([name, value]) => headers.append(name, value))
+            // const headers = new Headers()
+            // if(props.headers)    
+            //     Object.entries(props.headers).map(([name, value]) => headers.append(name, value))
 
             const data = await fetch(src, { headers })
             const blob = await data.blob()
