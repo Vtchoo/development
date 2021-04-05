@@ -51,17 +51,20 @@ function PageImgWithHeaders() {
 
             <button onClick={() => setImagesLoaded(false)} style={{ justifySelf: 'center' }}>Reload images</button>
 
+            <SyntaxHighlighter language='jsx' style={dracula} wrapLongLines>
+                {`const url = '${url}'`}
+            </SyntaxHighlighter>
             <div style={{ display: 'flex' }}>
                 <div style={{ flex: 1, marginRight: '1rem' }}>
                     <img style={{ width: '100%' }} src={imagesLoaded ? url : ''}></img>
                     <SyntaxHighlighter language='jsx' style={dracula} wrapLongLines>
-                        {`<img src='${url}'></img>`}
+                        {`<img src={url}></img>`}
                     </SyntaxHighlighter>
                 </div>
-                <div style={{ flex: 1 }}>
+                <div style={{ flex: 1, }}>
                     <Img style={{ width: '100%' }} src={imagesLoaded ? url : ''} headers={{ 'X-Custom-Header': 'value123' }} />
                     <SyntaxHighlighter language='jsx' style={dracula} wrapLongLines>
-                        {`<Img src='${url}' headers={{ 'X-Custom-Header': 'value123' }}></Img>`}
+                        {`<Img src={url} headers={{ 'X-Custom-Header': 'value123' }}></Img>`}
                     </SyntaxHighlighter>
                 </div>
             </div>
