@@ -79,7 +79,7 @@ function PageUseDebounce() {
 }
 
 const codeComponentUseDebounce =
-`function useDebounce(func: () => void, dependencies: any[], delay: number) {
+`function useDebounce(func: () => void, dependencies: any[] = [], delay: number) {
 
     useEffect(() => {
         const timeout = setTimeout(func, delay)
