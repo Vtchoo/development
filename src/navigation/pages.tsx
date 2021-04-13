@@ -4,6 +4,7 @@ import PageUseDebounce from "../pages/hooks/useDebounce"
 
 import PageImgWithHeaders from '../pages/components/ImgWithHeaders'
 import PageCustomSelect from '../pages/components/CustomSelect'
+import PageBlockchain from '../pages/concepts/Blockchain'
 
 interface Page {
     name: string,
@@ -51,6 +52,11 @@ const pageCustomSelect: Page = {
     path: '/development/select',
     component: PageCustomSelect
 }
+const pageBlockchain: Page = {
+    name: 'Blockchain',
+    path: '/development/blockchain',
+    component: PageBlockchain
+}
 
 const pages = [
     home,
@@ -58,7 +64,9 @@ const pages = [
     pageUseDebounce,
     
     pageImgWithHeaders,
-    pageCustomSelect
+    pageCustomSelect,
+
+    pageBlockchain
 ]
 
 //
@@ -81,6 +89,12 @@ const sections: Section[] = [
         pages: [
             pageImgWithHeaders,
             pageCustomSelect
+        ]
+    },
+    {
+        name: 'Concepts',
+        pages: [
+            pageBlockchain
         ]
     }
 ]
