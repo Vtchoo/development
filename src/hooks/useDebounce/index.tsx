@@ -19,7 +19,7 @@ function useDebouncedValue<T>(value: T, delay: number) {
     return debouncedValue
 }
 
-function useDebounce(func: () => void, dependencies: any[], delay: number) {
+function useDebounce(func: () => void, dependencies: any[] = [], delay: number) {
 
     useEffect(() => {
 
